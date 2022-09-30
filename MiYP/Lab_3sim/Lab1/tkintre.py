@@ -5,9 +5,8 @@ from turtle import width
 tk = tkinter.Tk()
 tk.title("Первая лаба")
 tk.resizable(width=False,height=False)
-frame_1= tkinter.Frame(tk,bg="white",bd=0)
-frame_1.pack()
 prt = 0
+
 def displae_selection(choice):
     global prt
     prt = tkvard.get()
@@ -22,7 +21,6 @@ def but_funk():
     if prt == '❹ y=Acos(B*x)':
         grafic_4()
     
-
 def grafic_1():
     y6_axe=[]
     yy = (22,335)
@@ -61,8 +59,6 @@ def clear():
     convas.create_rectangle(23,20,470,334,outline="white",fill='white')
 
 
-
-
 button = tkinter.Button(
     text="Закрыть ✖",
     font=("Times New Roman",12),
@@ -71,7 +67,6 @@ button = tkinter.Button(
     command=tk.quit,)
 button.pack()    
 button.place(x=385,y=1)
-
 
 button1 = tkinter.Button(
     text="✍",
@@ -99,7 +94,6 @@ tkvard.set(O_menu[0])
 menu = tkinter.OptionMenu(tk,tkvard,*O_menu,command=displae_selection)
 menu.config(width=12 , height=1)
 menu.pack(anchor='nw')
-
 
 
 convas = tkinter.Canvas(tk)
