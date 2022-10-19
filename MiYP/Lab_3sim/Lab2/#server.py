@@ -1,4 +1,4 @@
-import socket 
+import socket , json
 HOST = "127.0.0.1"
 PORT = 5001
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -12,7 +12,8 @@ while 1:
         break
     else:
         print('Получена data')
-    conn.send(data)
+        conn.send(data)
+        continue
     print('Отправленна data')
 conn.close()
 
